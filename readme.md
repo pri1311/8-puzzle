@@ -3,6 +3,7 @@
 
 #### `The problem`
 The 8-puzzle problem is a puzzle invented and popularized by Noyes Palmer Chapman in the 1870s. It is played on a 3-by-3 grid with 8 square blocks labelled 1 through 8 and a blank square. Your goal is to rearrange the blocks so that they are in order. You are permitted to slide blocks horizontally or vertically into the blank square. The following shows a sequence of legal moves from an initial board position (left) to the goal position (right).
+![Example](https://github.com/pri1311/8-puzzle/blob/master/Images/Example.png)
 
 #### `ALgorithms`
 1. Uniformed - BFS
@@ -19,18 +20,20 @@ The number of blocks in the wrong position. Intuitively, a state with a small nu
 2. `MANHATTAN PRIORITY FUNCTION.`
 The sum of the distances (sum of the vertical and horizontal distance) from the blocks to their goal positions.
 For example, the Hamming and Manhattan priorities of the initial state below are 5 and 10, respectively.
+![HeuristicExample](https://github.com/pri1311/8-puzzle/blob/master/Images/HeuristicExample.png)
 
 Note that we do not count the blank tile when computing the Hamming or Manhattan priorities.)
 
 #### `A critical optimization`
 After implementing best-first search, you will notice one annoying feature: states corresponding to the same board position are enqueued on the priority queue many times. To prevent unnecessary exploration of useless states, when considering the neighbors of a state, don't enqueue the neighbor if its board position is the same as the previous state.
+![visitedExample](https://github.com/pri1311/8-puzzle/blob/master/Images/visitedExample.py.png)
 
 #### `Detecting infeasible puzzles`
 Not all initial board positions can lead to the goal state. 
 Reference - https://www.geeksforgeeks.org/check-instance-8-puzzle-solvable/
 
 #### `How to Get Started`
-git clone ''
+git clone 'https://github.com/pri1311/8-puzzle'
 cd 8puzzle
 python 8puzzle.py
 
